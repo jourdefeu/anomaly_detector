@@ -22,23 +22,22 @@ A program designed to detect anomalous network activity on a host using machine 
 - Adapts the anomaly threshold to the sample based on reconstruction loss.
 
 ### File `detector.py`
-- Непрерывно собирает тестовую выборку на сетевом интерфейсе и сохраняет в формате `.csv`
-- Преобразует и проверяет выборку на предмет аномальности с помощью обученной нейронной сети. 
-- Формирует отчет об обнаруженных аномалиях (на консоли и в файле).
-- **`НЕЛЬЗЯ`** Можно при запуске программы подгрузить и использовать обученную ранее свою нейросеть.
+- Collects the test sample on network interface nonstop and saves it in `.csv' format
+- Converts and checks the sample for anomalies using a trained neural network. 
+- Generates a report on detected anomalies (on the console and in a file).
  
 ## 📍 The Process
 
-У меня была задача совместить две главные сферы XXI века - cybersecurity и data science. Большинство защитных механизмов уже сделано, но угрозы информационной безопасности развиваются с каждым днем всё сильнее и появляется необходимость внедрения нейронных сетей и LLM в существующие продукты безопасности. Этим проектом я хотела показать, что для выявления аномалий трафика сети, не являющегося размеченным, можно использовать предварительно обученную на данных этого же трафика нейронную сеть.   
+I've been on a mission to combine two major areas of the 21st century - cybersecurity and data science. Most of the security mechanisms are already made, but threats to information security are growing daily and there is a need to include neural networks and LLM in existing security products. With this project I wanted to show that it is possible to use a neural network pre-trained on traffic data to detect anomalies in unlabeled network traffic.   
 
 ## 🚦 Running the Project
 
-1. Установи python_version 3.7-3.9 (у меня python_version==3.8.20)
-2. Склонируй репозиторий
-3. Установи зависимости в виртуальном окружении: `pip install -r requirements.txt`
-4. Запусти скрипт `python3 sniff.py`, введи время в часах, дождись результат. 
-5. Запусти скрипт `python3 train.py`, дождись результат.
-6. Запусти скрипт `python3 detector.py`. Трафик будет собираться до тех пор, пока не нажать клавищи `ctrl+C`, введи количество эпох, дождись результат.
+1. Install python_version 3.7-3.9 (I have python_version==3.8.20)
+2. Clone the repository
+3. Install dependencies in a virtual environment: `pip install -r requirements.txt`
+4. Run the `python3 sniff.py` script, enter the time in hours, wait for the result. 
+5. Run the `python3 train.py` script, wait for the result.
+6. Run the `python3 detector.py` script. Traffic will be collected until you press `ctrl+C`, enter the number of epochs, wait for the result.
 
 ## 🎞️ Preview
 
@@ -53,4 +52,4 @@ A program designed to detect anomalous network activity on a host using machine 
 <img src="https://github.com/user-attachments/assets/39e6dccd-a640-459e-a2c0-3f8cf9fbe7e8" width="754.7" height="377.3"><br/>
 
 
-Открыть модель можно [здесь](https://netron.app/).
+You can see the model [here](https://netron.app/).
