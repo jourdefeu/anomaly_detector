@@ -1,6 +1,6 @@
 # 🕸 Anomaly Detector
 
-A program designed to detect anomalous network activity on a host using machine learning techniques.
+A program designed to detect network anomaly activity on a host using machine learning techniques.
 
 ## ✨ Technologies
 
