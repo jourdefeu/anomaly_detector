@@ -104,7 +104,7 @@ def train(model, num_epochs, train_loader):
         # Обучающий цикл
         for batch in train_loader:
             inputs = batch[0]  # получение входных данных; batch - список инпутов [inputs]
-            optimizer.zero_grad()   # обнулим градиент чтобы быстрее обучалась (это же не в прод, а тестовое)
+            optimizer.zero_grad()   # обнуляем градиент, чтобы не накапливался и не тормозил процесс обучения
             outputs = model(inputs)   # предсказания модели
             train_loss = criterion(outputs, inputs)   # подсчитать потери для прогнозируемого выхода
             train_loss.backward()   # обратная передача потерь
